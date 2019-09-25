@@ -1,6 +1,6 @@
 # Data Logger (and using cool sensors!)
 
-*A lab report by John Q. Student.*
+*A lab report by Bar Kadosh.*
 
 ## In The Report
 
@@ -11,20 +11,27 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
 ## Part A.  Writing to the Serial Monitor
  
 **a. Based on the readings from the serial monitor, what is the range of the analog values being read?**
+ Connected Potentiiometer to A0 --> when potentiometer is turned all the way to one end value is 0, all the way to other end value is 1023
  
 **b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**
+2^10
 
 ## Part B. RGB LED
 
 **How might you use this with only the parts in your kit? Show us your solution.**
+- made use of 100 ohm resistors -- 2 in parallel created a 50. Connect to power and 3 digital pins, remove cmommented analog line of code, run code.
 
 ## Part C. Voltage Varying Sensors 
  
 ### 1. FSR, Flex Sensor, Photo cell, Softpot
 
+Using 22k ohm instead
+
 **a. What voltage values do you see from your force sensor?**
+Was able to get it as high as 1010 and as low as 30 -- prob goes until 1023
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
+Look up -- seems linear but hard to tell
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
 
@@ -36,11 +43,6 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
  
 **a. Include your accelerometer read-out code in your write-up.**
 
-### 3. IR Proximity Sensor
-
-**a. Describe the voltage change over the sensing range of the sensor. A sketch of voltage vs. distance would work also. Does it match up with what you expect from the datasheet?**
-
-**b. Upload your merged code to your lab report repository and link to it here.**
 
 ## Optional. Graphic Display
 
