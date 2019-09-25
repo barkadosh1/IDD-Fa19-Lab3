@@ -31,11 +31,13 @@ Using 22k ohm instead
 Was able to get it as high as 1010 and as low as 30 -- prob goes until 1023
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
-Look up -- seems linear but hard to tell
+Look up -- seems linear but hard to tell ---nvm, seems harder to raise as get higher
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
+LEDbrightness = map(fsrReading, 0, 1023, 2, 255);
 
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
+photo -- 22k: low ad 10, high as 1014
 
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
 
