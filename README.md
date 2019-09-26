@@ -26,7 +26,7 @@ The analog to digital coverter (ADC) on the arduino allows for 1024 discrete ana
 
 **How might you use this with only the parts in your kit? Show us your solution.**
 
-One way we might make use of RGB LEDs is with Christmas lights that alternate colors — we can have all lights start as Green then shift to Red then shift to Blue and continue shifting in a fun and colorful way. Another potential application is if we wanted to mimic a traffic light with one LED for start-stop events. For example if we wanted to run a race, we could have the light start on red, shift to yellow to have us get set, and then start running as soon as it turns green. A last potential example is if we wanted to set up a trivia machine. We could have four buttons, each corresponding to an answer (one of which will be correct). If the correct answer is pressed, the LED turns green and if the incorrect answer is pressed, the LED turns red.
+One way we might make use of RGB LEDs is with Christmas lights that alternate colors — we can have all lights start as Green then shift to Red then shift to Blue and continue shifting in a fun and colorful way. Another potential application is if we wanted to mimic a traffic light with one LED for start-stop events. For example if we wanted to run a race, we could have the light start on red, shift to yellow to have us get set, and then start running as soon as it turns green. A last potential example is if we wanted to set up a trivia machine. We could have four buttons, each corresponding to an answer (one of which will be correct). If the correct answer is pressed, the LED turns green, and if the incorrect answer is pressed, the LED turns red.
 
 During lab, I set up the RGB LED so that the color would alternate between six colors. As a remark about my setup — I made use of only 100 ohm resistors, so in order to account for the 150 ohm case with the Red segment of the RGB LED, I used a 100 ohm resistor in series with two 100 ohm resistors in parallel (equivalent to 150 ohms). The video of my RGB working is below.
 
@@ -35,17 +35,22 @@ During lab, I set up the RGB LED so that the color would alternate between six c
 ## Part C. Voltage Varying Sensors 
  
 ### 1. FSR, Flex Sensor, Photo cell, Softpot
- 
-Using 22k ohm instead
 
 **a. What voltage values do you see from your force sensor?**
-Was able to get it as high as 1010 and as low as 30 -- prob goes until 1023
+
+With my force sensor, I am able to get values as low as 30 when I am barely pressing (the value starts at 0 if I am not pressing) and values as high as 1010 when I press as hard as I can. However, I was using a 22k Ohm resistor, so maybe using a 10k Ohm resistor would have allowed me to be able to produce the full range of values (0-102), though the range I was able to see with my setup was quite good/encompassing. 
+
+VIDEO HERE
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
-Look up -- seems linear but hard to tell ---nvm, seems harder to raise as get higher
+
+For the most part, the simple description for the relationship I saw is linear. In general, when I pressed harder, the the voltage seemed to increase in a somewhat linear fashion. However, since I was only able to start at a voltage value of 30 and it only jumped up to that value once I applied a certain amount of force (this amount was quite low, but I did notice that if i pressed lightly enough, the voltage was 0), I think of the beginning of the relationship as a step function. Towards the higher values, I also noticed that I had press much harder to get the voltage readings to continue rising -- therefore, I like to think of the tail end of the relationship as logarithimic. Everything in between was fairly linear. A photo of the relationship between voltage and force in my setup is below.
+
+PHOTO HERE
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
-LEDbrightness = map(fsrReading, 0, 1023, 2, 255);
+
+Yes! A simple function we can use is the map() function. With the following line, "LEDbrightness = map(fsrReading, 0, 1023, 0, 255);", we can take "fsrReading" value (which is the FSR analog reading between 0 and 1023) and map it to an LED value between 0 and 255.
 
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
 photo -- 22k: low as 10, high as 1014
