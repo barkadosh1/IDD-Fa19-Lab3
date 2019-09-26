@@ -90,7 +90,11 @@ from i2c, similarly would map. Typically it is 8 bit so no change, but otherwise
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
 
+ANSWER LATER
+
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
+
+CODE AND VIDEO HERE
 
 ### 2. Design your logger
  
