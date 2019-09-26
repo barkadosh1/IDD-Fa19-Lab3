@@ -11,10 +11,16 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
 ## Part A.  Writing to the Serial Monitor
  
 **a. Based on the readings from the serial monitor, what is the range of the analog values being read?**
- Connected Potentiiometer to A0 --> when potentiometer is turned all the way to one end value is 0, all the way to other end value is 1023
  
+After connecting my potentiometer to A0 and uploading the code, I began seeing values appearing on the serial monitor. When the potentiometer was turned all the way so that resistance was maximized, the A0 value being printed was 0. When the potentiometer was turned all the way to the other end so that resistance was minimized, the A0 value being printed was 1023. Therefore, the range of of the analog values was 0-1023 (1024 possible values).
+
+[Analog Values on Serial Monitor](https://youtu.be/ujy_T5v5900) -- As can be seen in the video, the analog values being printed to the serial monitor range from 0 to 1023 as I turn the potentiometer from end to end. 
+
+[Analog Values on Plotter](https://youtu.be/c9H6gWHCYMs) -- Similarly, as can be seen in this video, the analog values being printed on the plotter range from 0 to 1023 as I turn the potentiometer. 
+
 **b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**
-2^10
+
+The analog to digital coverter (ADC) on the arduino allows for 1024 discrete analog values to be measured/printed, which is equivalent to 2^10 possible discrete analog values. Therefore, we can say that the ADC is a **10-bit ADC. **
 
 ## Part B. RGB LED
 
@@ -60,6 +66,7 @@ video
 ### 1. Reading and writing values to the Arduino EEPROM
 
 **a. Does it matter what actions are assigned to which state? Why?**
+- Yes, the states get performed in order, 0 then 1 then 2, so if you want your actions to follow a similar ordering, it matters where you assign them 
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
