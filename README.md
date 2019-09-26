@@ -14,18 +14,23 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
  
 After connecting my potentiometer to A0 and uploading the code, I began seeing values appearing on the serial monitor. When the potentiometer was turned all the way so that resistance was maximized, the A0 value being printed was 0. When the potentiometer was turned all the way to the other end so that resistance was minimized, the A0 value being printed was 1023. Therefore, the range of of the analog values was 0-1023 (1024 possible values).
 
-[Analog Values on Serial Monitor](https://youtu.be/ujy_T5v5900) -- As can be seen in the video, the analog values being printed to the serial monitor range from 0 to 1023 as I turn the potentiometer from end to end. 
+[Analog Values on Serial Monitor](https://youtu.be/ujy_T5v5900) -- As can be seen in this video, the analog values being printed to the serial monitor range from 0 to 1023 as I turn the potentiometer from end to end. 
 
 [Analog Values on Plotter](https://youtu.be/c9H6gWHCYMs) -- Similarly, as can be seen in this video, the analog values being printed on the plotter range from 0 to 1023 as I turn the potentiometer. 
 
 **b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**
 
-The analog to digital coverter (ADC) on the arduino allows for 1024 discrete analog values to be measured/printed, which is equivalent to 2^10 possible discrete analog values. Therefore, we can say that the ADC is a **10-bit ADC. **
+The analog to digital coverter (ADC) on the arduino allows for 1024 discrete analog values to be measured/printed, which is equivalent to 2^10 possible discrete analog values. Therefore, we can say that the ADC is a **10-bit ADC.**
 
 ## Part B. RGB LED
 
 **How might you use this with only the parts in your kit? Show us your solution.**
-- made use of 100 ohm resistors -- 2 in parallel created a 50. Connect to power and 3 digital pins, remove cmommented analog line of code, run code.
+
+One way we might make use of RGB LEDs is with Christmas lights that alternate colors — we can have all lights start as Green then shift to Red then shift to Blue and continue shifting in a fun and colorful way. Another potential application is if we wanted to mimic a traffic light with one LED for start-stop events. For example if we wanted to run a race, we could have the light start on red, shift to yellow to have us get set, and then start running as soon as it turns green. A last potential example is if we wanted to set up a trivia machine. We could have four buttons, each corresponding to an answer (one of which will be correct). If the correct answer is pressed, the LED turns green and if the incorrect answer is pressed, the LED turns red.
+
+During lab, I set up the RGB LED so that the color would alternate between six colors. As a remark about my setup — I made use of only 100 ohm resistors, so in order to account for the 150 ohm case with the Red segment of the RGB LED, I used a 100 ohm resistor in series with two 100 ohm resistors in parallel (equivalent to 150 ohms). The video of my RGB working is below.
+
+[RGB LED Lights!](https://youtu.be/fB4QqWRvrmc)
 
 ## Part C. Voltage Varying Sensors 
  
