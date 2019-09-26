@@ -35,7 +35,7 @@ During lab, I set up the RGB LED so that the color would alternate between six c
 ## Part C. Voltage Varying Sensors 
  
 ### 1. FSR, Flex Sensor, Photo cell, Softpot
-
+ 
 Using 22k ohm instead
 
 **a. What voltage values do you see from your force sensor?**
