@@ -49,6 +49,10 @@ softpot -- 10 k
 
 ## Optional. Graphic Display
 
+modified code to print A0 value
+code
+video
+
 **Take a picture of your screen working insert it here!**
 
 ## Part D. Logging values to the EEPROM and reading them back
