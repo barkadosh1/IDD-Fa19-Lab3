@@ -40,13 +40,13 @@ During lab, I set up the RGB LED so that the color would alternate between six c
 
 With my force sensor, I am able to get values as low as 30 when I am barely pressing (the value starts at 0 if I am not pressing) and values as high as 1010 when I press as hard as I can. However, I was using a 22k Ohm resistor, so maybe using a 10k Ohm resistor would have allowed me to be able to produce the full range of values (0-102), though the range I was able to see with my setup was quite good/encompassing. 
 
-VIDEO HERE
+[Voltage Readings With FSR](https://youtu.be/DdxIlCk6ZEA)
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
 
 For the most part, the simple description for the relationship I saw is linear. In general, when I pressed harder, the the voltage seemed to increase in a somewhat linear fashion. However, since I was only able to start at a voltage value of 30 and it only jumped up to that value once I applied a certain amount of force (this amount was quite low, but I did notice that if i pressed lightly enough, the voltage was 0), I think of the beginning of the relationship as a step function. Towards the higher values, I also noticed that I had press much harder to get the voltage readings to continue rising -- therefore, I like to think of the tail end of the relationship as logarithimic. Everything in between was fairly linear. A photo of the relationship between voltage and force in my setup is below.
 
-PHOTO HERE
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-26%20at%204.12.58%20PM.png">
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
 
