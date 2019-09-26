@@ -22,7 +22,7 @@ After connecting my potentiometer to A0 and uploading the code, I began seeing v
 
 The analog to digital coverter (ADC) on the arduino allows for 1024 discrete analog values to be measured/printed, which is equivalent to 2^10 possible discrete analog values. Therefore, we can say that the ADC is a **10-bit ADC.**
 
-## Part B. RGB LED
+## Part B. RGB LED 
 
 **How might you use this with only the parts in your kit? Show us your solution.**
 
@@ -94,7 +94,9 @@ ANSWER LATER
 
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
 
-CODE AND VIDEO HERE
+EXPLAIN CODE, WHAT IS HAPPENING 
+
+CODE HERE
 
 ### 2. Design your logger
  
