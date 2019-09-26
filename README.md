@@ -44,13 +44,13 @@ With my force sensor, I am able to get values as low as 30 when I am barely pres
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
 
-For the most part, the simple description for the relationship I saw is linear. In general, when I pressed harder, the the voltage seemed to increase in a somewhat linear fashion. However, since I was only able to start at a voltage value of 30 and it only jumped up to that value once I applied a certain amount of force (this amount was quite low, but I did notice that if i pressed lightly enough, the voltage was 0), I think of the beginning of the relationship as a step function. Towards the higher values, I also noticed that I had press much harder to get the voltage readings to continue rising -- therefore, I like to think of the tail end of the relationship as logarithimic. Everything in between was fairly linear. A photo of the relationship between voltage and force in my setup is below.
+For the most part, the simple description for the relationship I saw is linear. In general, when I pressed harder, the voltage seemed to increase in a somewhat linear fashion. However, since I was only able to start at a voltage value of 30 and it only jumped up to that value once I applied a certain amount of force (this amount was quite low, but I did notice that if I pressed lightly enough, the voltage was still 0), I think of the beginning of the relationship as a step function. Towards the higher values, I also noticed that I had to press much harder to get the voltage readings to continue rising -- therefore, I like to think of the tail end of the relationship as logarithmic. Everything in between was fairly linear. A photo of the relationship between voltage and force in my setup is below.
 
 <img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-26%20at%204.12.58%20PM.png">
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
 
-Yes! A simple function we can use is the map() function. With the following line, "LEDbrightness = map(fsrReading, 0, 1023, 0, 255);", we can take "fsrReading" value (which is the FSR analog reading between 0 and 1023) and map it to an LED value between 0 and 255.
+Yes! A simple function we can use is the map() function. With the following line, "LEDbrightness = map(fsrReading, 0, 1023, 0, 255);", we can take "fsrReading" (which is the FSR analog reading between 0 and 1023) and map it to an LED value between 0 and 255.
 
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
 photo -- 22k: low as 10, high as 1014
