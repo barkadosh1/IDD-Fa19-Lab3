@@ -71,13 +71,22 @@ video
 ### 1. Reading and writing values to the Arduino EEPROM
 
 **a. Does it matter what actions are assigned to which state? Why?**
+
 - Yes, the states get performed in order, 0 then 1 then 2, so if you want your actions to follow a similar ordering, it matters where you assign them 
+- clear read write --> tied to voltage, if we change it around order doesnt make sense, doesnt make sense to write when voltage is 0 
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
+because the switchstate loop will call it through its own loop each time, otherwise, when going into a state we will end up in infinite loop until state change
+
 **c. How many byte-sized data samples can you store on the Atmega328?**
 
+1024
+
 **d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
+
+map from 10 bit to 8 bit -- of course you are losing some level of preciseness here 
+from i2c, similarly would map. Typically it is 8 bit so no change, but otherwise we would map it with the bit value it might be. If dont know what bit value it is, can do a calculation where you find proportion, etc. 
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
 
