@@ -37,7 +37,8 @@ Look up -- seems linear but hard to tell ---nvm, seems harder to raise as get hi
 LEDbrightness = map(fsrReading, 0, 1023, 2, 255);
 
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
-photo -- 22k: low ad 10, high as 1014
+photo -- 22k: low as 10, high as 1014
+softpot -- 10 k
 
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
 
