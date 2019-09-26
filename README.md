@@ -38,7 +38,7 @@ During lab, I set up the RGB LED so that the color would alternate between six c
 
 **a. What voltage values do you see from your force sensor?**
 
-With my force sensor, I am able to get values as low as 30 when I am barely pressing (the value starts at 0 if I am not pressing) and values as high as 1010 when I press as hard as I can. However, I was using a 22k Ohm resistor, so maybe using a 10k Ohm resistor would have allowed me to be able to produce the full range of values (0-102), though the range I was able to see with my setup was quite good/encompassing. 
+With my force sensor, I am able to get values as low as 30 when I am barely pressing (the value starts at 0 if I am not pressing) and values as high as 1010 when I press as hard as I can. However, I was using a 22k Ohm resistor, so maybe using a 10k Ohm resistor would have allowed me to produce the full range of values (0-1023), though the range I was able to see with my setup was quite good/encompassing. 
 
 [Voltage Readings With FSR](https://youtu.be/DdxIlCk6ZEA)
 
