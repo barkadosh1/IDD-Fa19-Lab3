@@ -142,7 +142,7 @@ The basic idea is stated above and most of the technical aspects are stated as w
 
 With this part of the lab, I wanted to better understand the EEPROM put and get functions, so I used the put function to store my time value of type long in the EEPROM. The other high-level aspect of my code is that once the user successfully holds the FSR for 10 seconds (they can do many other things in between such as not press the FSR for some time, not press it hard enough for some time, press it hard enough for 5 seconds and then take their hand off and retry, etc.), the final time value is calculated and placed in the EEPROM. I then use the get method to access the start and stop times stored in the EEPROM and calculate the amount of "snooze" time from when the alarm started to when the user successfully turned it off. This snooze time is printed to the LCD.
 
-[Sun-Triggered Alarm, Touch-Based To Turn Off](https://youtu.be/Hmlz6unig8U)
+[Sun-Triggered Alarm, Touch-Based To Turn Off Video](https://youtu.be/Hmlz6unig8U)
 
 [Data Logger Main Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/DataLogger.ino)
 
