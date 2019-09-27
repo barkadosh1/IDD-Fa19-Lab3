@@ -80,11 +80,13 @@ As can be seen in the video, when I lift my device up and down in the z directio
 
 ## Optional. Graphic Display
 
-modified code to print A0 value
-code
-video
+For this part, I simply used the display to print the analog value to the display screen using "analogRead(A0)" and "display.print()" and "display.display()."
 
 **Take a picture of your screen working insert it here!**
+
+[Modified Graphic Display Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/ssd1306_modified.ino)
+
+[Modified Graphic Display Video](https://youtu.be/Z1XSXNLJ-3o)
 
 ## Part D. Logging values to the EEPROM and reading them back
  
