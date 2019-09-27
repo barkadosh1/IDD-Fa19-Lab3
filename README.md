@@ -98,7 +98,7 @@ Yes. The states are determined by the voltage reading from the specified analog.
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
-Our switchstate loop will be the actual loop and will be checking which state we are in each each time through the loop. Therefore, through each loop, the doState() function will be called for the current state. Since the switchstate is already looping, it would be redundant to loop within the state as well; rather, we would like to just measure the analog reading for the one state and then exit the function so so that the main switchstate loop can run again and determine the next loop. Therefore, the state0, state1, and state2 functions will have their code in the setup as we only want them to run once for a given switchstateloop so that we can understand the voltage reading at that specific point in time.
+Our switchstate loop will be the actual loop and will be checking which state we are in each each time through the loop. Therefore, through each loop, the doState() function will be called for the current state. Since the switchstate is already looping, it would be redundant to loop within the state as well; rather, we would like to just measure the analog reading for the one state and then exit the function so that the main switchstate loop can run again and determine the next state. Therefore, the state0, state1, and state2 functions will have their code in the setup as we only want them to run once for a given switchstateloop so that we can understand the voltage reading at that specific point in time.
 
 **c. How many byte-sized data samples can you store on the Atmega328?**
 
