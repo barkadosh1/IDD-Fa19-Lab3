@@ -53,10 +53,18 @@ For the most part, the simple description for the relationship I saw is linear. 
 Yes! A simple function we can use is the map() function. With the following line, "LEDbrightness = map(fsrReading, 0, 1023, 0, 255);", we can take "fsrReading" (which is the FSR analog reading between 0 and 1023) and map it to an LED value between 0 and 255.
 
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
-photo -- 22k: low as 10, high as 1014
-softpot -- 10 k
+
+For the photo cell, I used a resistance of 22k Ohms. With this resistance, I was able to output a voltage reading as low as 4 and as high as 1012, which is a very reasonable range of voltages. When the room was normally lit, it was ouputting a value of around 600. When I covered the photo cell with a wallet, the voltage output was 4 and when I placed a flashlight over it, the output voltage was 1012.
+
+[Photo Sensor](https://youtu.be/s-2jSnQv7vY)
+
+For the softpot, I used a 10k Ohm resistor. I was able to output the full range of voltages from 0 to 1023 as I slid my finger accross the softpot. As I moved accross the softput, the resistance decreased and the voltage increased. 
+
+[Softpot](https://youtu.be/YyoJhIp8nHc)
 
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
+
+Unlike with the FSR, the relationships appear to be more stricly linear in these cases (most values are reachable and it doesn't seem like extra light or force is needed towards the higher voltages). As the photo sensor receives more light, it seems to increase linearly; similarly, as I moved my finger accross the softpot, the voltage values seemed to increase linearly with regards to how much I had moved my finger along the softpot. 
 
 ### 2. Accelerometer
  
@@ -77,8 +85,7 @@ video
 
 **a. Does it matter what actions are assigned to which state? Why?**
 
-- Yes, the states get performed in order, 0 then 1 then 2, so if you want your actions to follow a similar ordering, it matters where you assign them 
-- clear read write --> tied to voltage, if we change it around order doesnt make sense, doesnt make sense to write when voltage is 0 
+Yes. The states are determined by the voltage reading from the specified analog. In this case, the first 1/3 voltages are classified as case 0, the second 1/3 of voltages as case 1, and the last 1/3 of voltages as case 2. Therefore, as we increase the voltage all the way up and then decrease it all the way down, we end up with the following sequence: clear --> read --> write --> read --> clear. This order seems to make sense as ultimately, we write the values to the EEPROM, read them, and then clear them. If we assign clear, read, and write to different states, we might end up with the following scenario when we turn the potentiometer all the way up and then back down: write --> clear --> read --> clear --> write. This case is clearly problematic because after we write our values, we clear them before we ever get to read them. Therefore, to achieve the ordering and output we are hoping for, it is very important that we assign the write actions to the write states given the current ordering of our states as it ties to the voltage output. 
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
@@ -86,7 +93,7 @@ because the switchstate loop will call it through its own loop each time, otherw
 
 **c. How many byte-sized data samples can you store on the Atmega328?**
 
-1024
+We can store 1024 byte-sized data samples on the Atmega328. As we will see in part e, we can therefore store 1024 8-bit voltage readings, for example. 
 
 **d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
 
