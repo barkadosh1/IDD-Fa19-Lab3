@@ -70,6 +70,13 @@ Unlike with the FSR, the relationships appear to be more stricly linear in these
  
 **a. Include your accelerometer read-out code in your write-up.**
 
+To begin with, I used the accelerometer code template. I then added in my LCD and my RGB LED. To set up, I set the RGB LED to have all values 0 (no light) and printed a couple of start-up messages on the LCD screen. Within the loop, I used the existing accelerometer code to capture and print the absolute values of the acceleration values (on the LCD screen). I chose to subtract 9.8 from the z acceleration to normalize its starting acceleration to 0 so that the accelerometer would capture changes from the initial acceleration. To convert these acceleration values to RGB values I did the following: I made the red value the proportion of x acceleration divided by the sum of x, y, and z accelerations and multiplied the value by 255. I did the same for the green and blue values, only I replaced the x acceleration in the numerator with y and z accelerations for green and blue, respectively. Finally, I flashed the LED with the colors based on these acceleration values. 
+
+As can be seen in the video, when I lift my device up and down in the z direction, it lights up blue. When I move it from side to side in the y direction, it lights up green, and when I move it forward and backward in the x direction, it lights up red. 
+
+[Accelerometer LED Display Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Acc_display.ino)
+
+[Accelerometer LED Display Video](https://youtu.be/mwniKxg9oms)
 
 ## Optional. Graphic Display
 
