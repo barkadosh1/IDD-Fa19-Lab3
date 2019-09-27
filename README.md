@@ -58,7 +58,7 @@ For the photo cell, I used a resistance of 22k Ohms. With this resistance, I was
 
 [Photo Sensor](https://youtu.be/s-2jSnQv7vY)
 
-For the softpot, I used a 10k Ohm resistor. I was able to output the full range of voltages from 0 to 1023 as I slid my finger accross the softpot. As I moved accross the softput, the resistance decreased and the voltage increased. 
+For the softpot, I used a 10k Ohm resistor. I was able to output the full range of voltages from 0 to 1023 as I slid my finger accross the softpot. As I moved accross the softpot, the resistance decreased and the voltage increased. 
 
 [Softpot](https://youtu.be/YyoJhIp8nHc)
 
