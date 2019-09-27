@@ -130,6 +130,8 @@ For my setup, I had both a potentiometer and FSR set up. I was using the potenti
  
 **a. Insert here a copy of your final state diagram.**
 
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%202.53.38%20AM.png">
+
 ### 3. Create your data logger!
  
 **a. Record and upload a short demo video of your logger in action.**
