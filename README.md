@@ -137,3 +137,11 @@ For my setup, I had both a potentiometer and FSR set up. I was using the potenti
 **a. Record and upload a short demo video of your logger in action.**
 
 [Sun-Triggered Alarm, Touch-Based To Turn Off](https://youtu.be/Hmlz6unig8U)
+
+[Data Logger Main Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/DataLogger.ino)
+
+[Data Logger State 0 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/state0.ino)
+
+[Data Logger State 1 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/state1.ino)
+
+[Data Logger State 2 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/state2.ino)
