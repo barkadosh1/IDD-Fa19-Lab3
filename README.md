@@ -135,3 +135,5 @@ For my setup, I had both a potentiometer and FSR set up. I was using the potenti
 ### 3. Create your data logger!
  
 **a. Record and upload a short demo video of your logger in action.**
+
+[Sun-Triggered Alarm, Touch-Based To Turn Off](https://youtu.be/Hmlz6unig8U)
