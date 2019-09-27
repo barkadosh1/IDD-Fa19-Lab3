@@ -64,7 +64,7 @@ For the softpot, I used a 10k Ohm resistor. I was able to output the full range 
 
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
 
-Unlike with the FSR, the relationships appear to be more stricly linear in these cases (most values are reachable and it doesn't seem like extra light or force is needed towards the higher voltages). As the photo sensor receives more light, it seems to increase linearly; similarly, as I moved my finger accross the softpot, the voltage values seemed to increase linearly with regards to how much I had moved my finger along the softpot. 
+Unlike with the FSR, the relationships appear to be more stricly linear in these cases (most values are reachable and it doesn't seem like extra light or force is needed towards the higher voltages). As the photo sensor receives more light, it seems to increase linearly; similarly, as I moved my finger accross the softpot, the voltage values seemed to increase linearly with how much I had moved my finger along the softpot. 
 
 ### 2. Accelerometer
  
