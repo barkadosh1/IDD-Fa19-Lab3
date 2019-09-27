@@ -98,7 +98,7 @@ Yes. The states are determined by the voltage reading from the specified analog.
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
-because the switchstate loop will call it through its own loop each time, otherwise, when going into a state we will end up in infinite loop until state change
+Our switchstate loop will be the actual loop and will be checking which state we are in each each time through the loop. Therefore, through each loop, the doState() function will be called for the current state. Since the switchstate is already looping, it would be redundant to loop within the state as well; rather, we would like to just measure the analog reading for the one state and then exit the function so so that the main switchstate loop can run again and determine the next loop. Therefore, the state0, state1, and state2 functions will have their code in the setup as we only want them to run once for a given switchstateloop so that we can understand the voltage reading at that specific point in time.
 
 **c. How many byte-sized data samples can you store on the Atmega328?**
 
@@ -106,18 +106,25 @@ We can store 1024 byte-sized data samples on the Atmega328. As we will see in pa
 
 **d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
 
-map from 10 bit to 8 bit -- of course you are losing some level of preciseness here 
-from i2c, similarly would map. Typically it is 8 bit so no change, but otherwise we would map it with the bit value it might be. If dont know what bit value it is, can do a calculation where you find proportion, etc. 
+From the arduino analog pins, we know we are going from 10 bits to one byte (8-bits), meaning we need to map from values 0-1023 to 0-255. Of course, we are losing some of the exactness in our values here, but it is a fine solution for now. To do this, we will cotinue to use the map function we have been using to convert 10-bit to 8-bit values. 
+
+From an I2C device, the answer is more dependent on how many bits it is on that device. If the device is just 8 bits, then no change is needed. However, if it is another value of bits, and we know that value, we can use the map function again to map from the value of bits on the I2C device to 8 bits. 
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
 
-ANSWER LATER
+Using the put function, we can store these values in a given memory address. However, if they are bigger than 1 byte, we will have to split them accross memory addresses. For example, for type float (4 bytes), we will have to store the value accross 4 memory addresses, as each house 1 byte. We will have to keep track in some way of where each part is stored and in what order so that we can reconstruct the value when we pull the portions back out of their memory addresses. 
 
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
 
-EXPLAIN CODE, WHAT IS HAPPENING 
+For my setup, I had both a potentiometer and FSR set up. I was using the potentiometer to read in and determine what state to follow and used the FSR to have its values measured in the write state. For the most part then, I only really changed code in the write state (except for changing code in SwitchState2 to add in the potentiometer and FSR). Within my write code, I am reading in the analog value every time the write state is called (through the SwitchState loop) and map it from the 0-1023 value range to the 0-255 value range. I start by writing this value to the 0th memory address and increment the memory dress with each call to the write state. This writes a series of analog voltage values to the memory address and they are then printed during the read state. Once I enter the clear state, these values are removed and the memory addresses are filled with 0's. As I turn my potentiometer, it goes from clear --> read -- write. As I hold the FSR in the write state, it records analog voltage values. When I turn back into the read state, those values are printed and are then cleared when I return to the clear state.
 
-CODE HERE
+[SwitchState2 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/SwitchState2.ino)
+
+[State0 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/State0.ino)
+
+[State1 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/State1.ino)
+
+[State2 Code](https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/State2.ino)
 
 ### 2. Design your logger
  
