@@ -8,6 +8,14 @@ Include your responses to the bold questions on your own fork of this lab report
 
 For this lab, we will be experimenting with a variety of sensors, sending the data to the Arduino serial monitor, writing data to the EEPROM of the Arduino, and then playing the data back.
 
+## Part 0. Pre-Lab
+
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.25%20PM.png">
+
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.43%20PM.png">
+
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.54%20PM.png">
+
 ## Part A.  Writing to the Serial Monitor
  
 **a. Based on the readings from the serial monitor, what is the range of the analog values being read?**
