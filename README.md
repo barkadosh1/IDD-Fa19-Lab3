@@ -10,9 +10,9 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
 
 ## Part 0. Pre-Lab
 
-<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.25%20PM.png">
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.53.34%20PM.png">
 
-<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.43%20PM.png">
+<img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.53.44%20PM.png">
 
 <img src="https://github.com/barkadosh1/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2010.46.54%20PM.png">
 
